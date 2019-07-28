@@ -7,6 +7,7 @@ RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.
     yum install -y php php-fpm php-gd php-mysql php-mbstring && \
     yum clean all && rm -rf /var/cache/yum && \
     groupadd www-data && \
-    useradd -M -n -s /bin/false -G www-data www-data
+    useradd -M -n -s /bin/false -G www-data www-data && \
+    curl -sLo /usr/local/bin/composer https://getcomposer.org/composer.phar && chmod +x /usr/local/bin/composer
 
 COPY root /
