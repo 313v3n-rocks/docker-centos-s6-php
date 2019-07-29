@@ -1,2 +1,2 @@
 #!/usr/bin/with-contenv sh
-s6-setuidgid php-fpm php-fpm -F
+s6-setuidgid www-data php-fpm -F
